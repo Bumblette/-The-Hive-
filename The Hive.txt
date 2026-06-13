@@ -622,16 +622,3 @@ Players.PlayerAdded:Connect(function(p)
     task.wait(0.2)
     setupPlayer(p)
 end)
- 
----------------------------------------------------------------------
--- 🟨 N KEY TOGGLE (ONLY HIDES YOUR OWN TAG)
----------------------------------------------------------------------
- 
-UIS.InputBegan:Connect(function(input, gp)
-    if gp then return end
-    if input.KeyCode == Enum.KeyCode.N then
-        if MyHiveTag then
-            MyHiveTag.Enabled = not MyHiveTag.Enabled
-        end
-    end
-end)
