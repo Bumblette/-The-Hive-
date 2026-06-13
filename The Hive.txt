@@ -1,14 +1,14 @@
-- Nyxelle Script Hub — NullFire-Style Layout (SMALL VERSION)
+-- Nyxelle Script Hub — NullFire-Style Layout (SMALL VERSION)
 -- Tabs + buttons + scripts from Sylveon, layout inspired by Fire-Lib / NullFire
 -- Toggle key: M
- 
+
 ---------------------------------------------------------------------
 -- CONFIG — SYLVEON TABS + SCRIPTS
 ---------------------------------------------------------------------
 local CONFIG = {
     HubTitle = "🍯The Hive🍯",
     SectionHeader = "🐝Made By OTerribleMouseO🐝",
- 
+
     Tabs = {
         {
             Name = "Main Scripts",
@@ -29,7 +29,7 @@ local CONFIG = {
                 "https://pastebin.com/raw/B2dsqUtc"
             }
         },
- 
+
         {
             Name = "Basic Scripts",
             Buttons = {"Invisible","CFrame Speed","Universal Silent Aim","Bring Hitboxes","Universal Aimbot",""},
@@ -42,7 +42,7 @@ local CONFIG = {
                 ""
             }
         },
- 
+
         {
             Name = "Script Hubs",
             Buttons = {"XVC Hub","Foxname Hub","Sky Hub","Onyx [Keyless]","",""},
@@ -55,7 +55,7 @@ local CONFIG = {
                 ""
             }
         },
- 
+
         {
             Name = "R15 Animations",
             Buttons = {"R15 Emote Wheel","","","R15 Invincible Fly","","R15 Custom Animations"},
@@ -68,7 +68,7 @@ local CONFIG = {
                 "https://pastebin.com/raw/DwjRachR"
             }
         },
- 
+
         {
             Name = "Visuals",
             Buttons = {"Shaders","ESP","Health ESP","Saturation","","Toon Lighting"},
@@ -81,7 +81,7 @@ local CONFIG = {
                 "https://pastebin.com/raw/jVscJs2S"
             }
         },
- 
+
         {
             Name = "Fun Stuff",
             Buttons = {"Illusion","","","",""},
@@ -91,21 +91,21 @@ local CONFIG = {
                 "",
                 "",
                 "",
- 
+           
             }
         },
     }
 }
- 
+
 ---------------------------------------------------------------------
 -- SERVICES
 ---------------------------------------------------------------------
 local Players = game:GetService("Players")
 local UIS = game:GetService("UserInputService")
- 
+
 local lp = Players.LocalPlayer
 local pg = lp:FindFirstChildOfClass("PlayerGui") or lp:WaitForChild("PlayerGui")
- 
+
 ---------------------------------------------------------------------
 -- ANTI-STACKING
 ---------------------------------------------------------------------
@@ -114,7 +114,7 @@ for _, gui in ipairs(pg:GetChildren()) do
         gui:Destroy()
     end
 end
- 
+
 ---------------------------------------------------------------------
 -- MAIN GUI
 ---------------------------------------------------------------------
@@ -124,7 +124,7 @@ gui.ResetOnSpawn = false
 gui.IgnoreGuiInset = true
 gui.DisplayOrder = 999999999
 gui.Parent = pg
- 
+
 local main = Instance.new("Frame")
 main.Size = UDim2.new(0, 520, 0, 320)
 main.Position = UDim2.new(0.5, -260, 0.5, -160)
@@ -132,7 +132,7 @@ main.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 main.BorderSizePixel = 0
 main.Parent = gui
 Instance.new("UICorner", main).CornerRadius = UDim.new(0, 10)
- 
+
 ---------------------------------------------------------------------
 -- TOP BAR
 ---------------------------------------------------------------------
@@ -142,7 +142,7 @@ top.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 top.BorderSizePixel = 0
 top.Parent = main
 Instance.new("UICorner", top).CornerRadius = UDim.new(0, 10)
- 
+
 local img = Instance.new("ImageLabel")
 img.Name = "TopRightImage"
 img.Size = UDim2.new(0, 28, 0, 28)
@@ -152,7 +152,7 @@ img.Image = "rbxassetid://478926446"
 img.ZIndex = 999999
 img.Parent = top
 Instance.new("UICorner", img).CornerRadius = UDim.new(0, 6)
- 
+
 local title = Instance.new("TextLabel")
 title.Size = UDim2.new(1, -20, 1, 0)
 title.Position = UDim2.new(0, 10, 0, 0)
@@ -162,7 +162,7 @@ title.Font = Enum.Font.Jura
 title.TextColor3 = Color3.fromRGB(217, 212, 74)
 title.TextScaled = true
 title.Parent = top
- 
+
 ---------------------------------------------------------------------
 -- DRAGGING
 ---------------------------------------------------------------------
@@ -185,7 +185,7 @@ UIS.InputChanged:Connect(function(i)
         main.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
     end
 end)
- 
+
 ---------------------------------------------------------------------
 -- TOGGLE WITH M
 ---------------------------------------------------------------------
@@ -196,7 +196,7 @@ UIS.InputBegan:Connect(function(i, gp)
         main.Visible = visible
     end
 end)
- 
+
 ---------------------------------------------------------------------
 -- SIDEBAR
 ---------------------------------------------------------------------
@@ -207,7 +207,7 @@ sidebar.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 sidebar.BorderSizePixel = 0
 sidebar.Parent = main
 Instance.new("UICorner", sidebar).CornerRadius = UDim.new(0, 10)
- 
+
 local sidebarLabel = Instance.new("TextLabel")
 sidebarLabel.Size = UDim2.new(1, 0, 0, 26)
 sidebarLabel.Position = UDim2.new(0, 0, 0, 4)
@@ -217,7 +217,7 @@ sidebarLabel.Font = Enum.Font.Jura
 sidebarLabel.TextColor3 = Color3.fromRGB(217, 212, 74)
 sidebarLabel.TextScaled = true
 sidebarLabel.Parent = sidebar
- 
+
 ---------------------------------------------------------------------
 -- CONTENT PANEL
 ---------------------------------------------------------------------
@@ -228,7 +228,7 @@ content.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 content.BorderSizePixel = 0
 content.Parent = main
 Instance.new("UICorner", content).CornerRadius = UDim.new(0, 10)
- 
+
 local innerHeader = Instance.new("TextLabel")
 innerHeader.Size = UDim2.new(1, -20, 0, 26)
 innerHeader.Position = UDim2.new(0, 10, 0, 6)
@@ -238,7 +238,7 @@ innerHeader.Font = Enum.Font.Jura
 innerHeader.TextColor3 = Color3.fromRGB(217, 212, 74)
 innerHeader.TextScaled = true
 innerHeader.Parent = content
- 
+
 local inner = Instance.new("Frame")
 inner.Size = UDim2.new(1, -20, 1, -40)
 inner.Position = UDim2.new(0, 10, 0, 34)
@@ -246,13 +246,13 @@ inner.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 inner.BorderSizePixel = 0
 inner.Parent = content
 Instance.new("UICorner", inner).CornerRadius = UDim.new(0, 10)
- 
+
 ---------------------------------------------------------------------
 -- TABS + PAGES
 ---------------------------------------------------------------------
 local tabs = {}
 local currentTab
- 
+
 local function createTabButton(i, name)
     local btn = Instance.new("TextButton")
     btn.Size = UDim2.new(1, -20, 0, 30)
@@ -266,10 +266,10 @@ local function createTabButton(i, name)
     Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
     return btn
 end
- 
+
 for i, tabData in ipairs(CONFIG.Tabs) do
     local tabBtn = createTabButton(i, tabData.Name)
- 
+
     local tabFrame = Instance.new("ScrollingFrame")
     tabFrame.Size = UDim2.new(1, 0, 1, 0)
     tabFrame.BackgroundTransparency = 1
@@ -278,15 +278,15 @@ for i, tabData in ipairs(CONFIG.Tabs) do
     tabFrame.ScrollBarThickness = 4
     tabFrame.ScrollBarImageColor3 = Color3.fromRGB(124, 23, 211)
     tabFrame.Parent = inner
- 
+
     local layout = Instance.new("UIListLayout", tabFrame)
     layout.SortOrder = Enum.SortOrder.LayoutOrder
     layout.Padding = UDim.new(0, 6)
- 
+
     for b = 1, 6 do
         local btnName = tabData.Buttons[b]
         local scriptURL = tabData.Scripts[b]
- 
+
         if btnName and btnName ~= "" then
             local btn = Instance.new("TextButton")
             btn.Size = UDim2.new(1, -10, 0, 32)
@@ -297,49 +297,49 @@ for i, tabData in ipairs(CONFIG.Tabs) do
             btn.TextScaled = true
             btn.Parent = tabFrame
             Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
- 
+
             btn.MouseButton1Click:Connect(function()
                 if not scriptURL or scriptURL == "" then
                     warn("No script URL set for this button.")
                     return
                 end
- 
+
                 local success, result = pcall(function()
                     return game:HttpGet(scriptURL)
                 end)
- 
+
                 if not success then
                     warn("Failed to fetch script from URL: " .. tostring(scriptURL))
                     return
                 end
- 
+
                 local runSuccess, runError = pcall(function()
                     loadstring(result)()
                 end)
- 
+
                 if not runSuccess then
                     warn("Script failed to execute: " .. tostring(runError))
                 end
             end)
         end
     end
- 
+
     layout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
         tabFrame.CanvasSize = UDim2.new(0, 0, 0, layout.AbsoluteContentSize.Y + 10)
     end)
- 
+
     tabBtn.MouseButton1Click:Connect(function()
         if currentTab then currentTab.Visible = false end
         currentTab = tabFrame
         tabFrame.Visible = true
     end)
- 
+
     tabs[i] = tabFrame
 end
- 
+
 tabs[1].Visible = true
 currentTab = tabs[1]
- 
+
 ---------------------------------------------------------------------
 -- STARTUP POPUP
 ---------------------------------------------------------------------
@@ -350,11 +350,11 @@ popup.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 popup.BorderSizePixel = 0
 popup.Parent = gui
 Instance.new("UICorner", popup).CornerRadius = UDim.new(0, 12)
- 
+
 local popupStroke = Instance.new("UIStroke", popup)
 popupStroke.Color = Color3.fromRGB(217, 212, 74)
 popupStroke.Thickness = 1.4
- 
+
 local popupTitle = Instance.new("TextLabel")
 popupTitle.Size = UDim2.new(1, -20, 0, 32)
 popupTitle.Position = UDim2.new(0, 10, 0, 6)
@@ -364,7 +364,7 @@ popupTitle.Font = Enum.Font.GothamSemibold
 popupTitle.TextColor3 = Color3.fromRGB(217, 212, 74)
 popupTitle.TextScaled = true
 popupTitle.Parent = popup
- 
+
 local popupMsg = Instance.new("TextLabel")
 popupMsg.Size = UDim2.new(1, -20, 0, 60)
 popupMsg.Position = UDim2.new(0, 10, 0, 40)
@@ -375,13 +375,13 @@ popupMsg.TextColor3 = Color3.fromRGB(217, 212, 74)
 popupMsg.TextScaled = true
 popupMsg.TextWrapped = true
 popupMsg.Parent = popup
- 
+
 UIS.InputBegan:Connect(function(i, gp)
     if not gp and i.KeyCode == Enum.KeyCode.X then
         popup:Destroy()
     end
 end)
- 
+
 ---------------------------------------------------------------------
 -- TOOLTIP SYSTEM
 ---------------------------------------------------------------------
@@ -395,33 +395,33 @@ local TooltipInfo = {
     ["No Void"] = "Removes the void kill zone so you won’t die from falling off the map.",
     ["ESP"] = "Highlights players through walls U to toggle — great for awareness and exploration.",
     ["Instant Proximity Prompt"] = "Makes all proximity prompts instant, so you can interact without holding keys forever but you might have to press it a few times its a bit buggy usually only works for nearby prompts.",
- 
+
     -- BASIC SCRIPTS
     ["Invisible"] = "Press G to toggle invisibility — useful for stealth or avoiding unwanted animations.",
     ["CFrame Speed"] = "Boosts your movement using CFrame manipulation; fast but requires rejoin to disable.",
     ["Universal Silent Aim"] = "Adds silent aim that targets enemies automatically without showing your crosshair movement.",
     ["Bring Hitboxes"] = "Brings player hitboxes for easier targeting — ideal for testing or combat scripts.",
     ["Universal Aimbot"] = "Enables a universal aimbot that locks onto targets smoothly across supported games.",
- 
+
     -- SCRIPT HUBS
     ["XVC Hub"] = "Loads XVC Hub — a reliable, feature‑packed hub with many fun and utility scripts.",
     ["Foxname Hub"] = "Opens Foxname Hub, known for its trolling and playful feature.",
     ["Sky Hub"] = "Loads Sky Hub, an older but entertaining script hub with classic FE tools.",
- 
+
     -- R6/R15 ANIMATIONS
     ["R15 Emote Wheel"] = "Adds an emote wheel for R15 avatars — pick and play emotes easily.",
     ["R6 Invincible Fly"] = "Lets R6 characters fly like invincible — great for exploration.",
     ["R15 Custom Animations"] = "Loads custom R15 animation packs for unique movement styles and effects.",
- 
+
     -- VISUALS
     ["Shaders"] = "Applies high‑quality shader effects to enhance lighting and color — makes visuals pop.",
- 
+
     -- FUN STUFF
     ["Illusion"] = "Creates illusion clones of your character — looks like there are three of you moving together.",
     ["Super Ring"] = "Makes unanchored parts spin around you — flashy and fun for showing off.",
     ["Tail Sway R6"] = "Adds a smooth tail sway animation for R6/R15 avatars — subtle but expressive.",
 }
- 
+
 local tooltip = Instance.new("Frame")
 tooltip.Size = UDim2.new(0, 260, 0, 80)
 tooltip.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
@@ -429,13 +429,13 @@ tooltip.BackgroundTransparency = 0.1
 tooltip.Visible = false
 tooltip.Parent = gui
 tooltip.ZIndex = 999999
- 
+
 Instance.new("UICorner", tooltip).CornerRadius = UDim.new(0, 8)
- 
+
 local tipStroke = Instance.new("UIStroke", tooltip)
 tipStroke.Color = Color3.fromRGB(217, 212, 74)
 tipStroke.Thickness = 1.4
- 
+
 local tipLabel = Instance.new("TextLabel")
 tipLabel.Size = UDim2.new(1, -14, 1, -14)
 tipLabel.Position = UDim2.new(0, 7, 0, 7)
@@ -446,13 +446,13 @@ tipLabel.TextScaled = true
 tipLabel.TextWrapped = true
 tipLabel.ZIndex = 999999
 tipLabel.Parent = tooltip
- 
+
 UIS.InputChanged:Connect(function(i)
     if tooltip.Visible and i.UserInputType == Enum.UserInputType.MouseMovement then
         tooltip.Position = UDim2.new(0, i.Position.X + 12, 0, i.Position.Y + 12)
     end
 end)
- 
+
 for _, tabFrame in pairs(tabs) do
     for _, btn in pairs(tabFrame:GetChildren()) do
         if btn:IsA("TextButton") then
@@ -463,14 +463,14 @@ for _, tabFrame in pairs(tabs) do
                     tooltip.Visible = true
                 end
             end)
- 
+
             btn.MouseLeave:Connect(function()
                 tooltip.Visible = false
             end)
         end
     end
 end
- 
+
 ---------------------------------------------------------------------
 -- CHANGELOG (FIXED + PURPLE THEME)
 ---------------------------------------------------------------------
@@ -484,7 +484,7 @@ changelogBtn.Font = Enum.Font.Jura
 changelogBtn.TextScaled = true
 changelogBtn.Parent = sidebar
 Instance.new("UICorner", changelogBtn).CornerRadius = UDim.new(0, 6)
- 
+
 local changelogFrame = Instance.new("Frame")
 changelogFrame.Size = UDim2.new(0, 360, 0, 220)
 changelogFrame.Position = UDim2.new(0.5, -180, 0.5, -110)
@@ -493,11 +493,11 @@ changelogFrame.BorderSizePixel = 0
 changelogFrame.Visible = false
 changelogFrame.Parent = gui
 Instance.new("UICorner", changelogFrame).CornerRadius = UDim.new(0, 12)
- 
+
 local changelogStroke = Instance.new("UIStroke", changelogFrame)
 changelogStroke.Color = Color3.fromRGB(217, 212, 74)
 changelogStroke.Thickness = 1.4
- 
+
 local changelogTitle = Instance.new("TextLabel")
 changelogTitle.Size = UDim2.new(1, -20, 0, 32)
 changelogTitle.Position = UDim2.new(0, 10, 0, 6)
@@ -507,14 +507,14 @@ changelogTitle.Font = Enum.Font.GothamSemibold
 changelogTitle.TextColor3 = Color3.fromRGB(217, 212, 74)
 changelogTitle.TextScaled = true
 changelogTitle.Parent = changelogFrame
- 
+
 local changelogText = Instance.new("TextLabel")
 changelogText.Size = UDim2.new(1, -20, 1, -50)
 changelogText.Position = UDim2.new(0, 10, 0, 40)
 changelogText.BackgroundTransparency = 1
 changelogText.Text = [[
 V1.0 — :3
- 
+
 Press X to dismiss
 ]]
 changelogText.Font = Enum.Font.Gotham
@@ -522,103 +522,17 @@ changelogText.TextColor3 = Color3.fromRGB(217, 212, 74)
 changelogText.TextScaled = true
 changelogText.TextWrapped = true
 changelogText.Parent = changelogFrame
- 
+
 UIS.InputBegan:Connect(function(i, gp)
     if not gp and i.KeyCode == Enum.KeyCode.X then
         changelogFrame.Visible = false
     end
 end)
- 
+
 changelogBtn.MouseButton1Click:Connect(function()
     changelogFrame.Visible = true
 end)
- 
----------------------------------------------------------------------
--- 🐝 HIVE TAG SYSTEM — ONLY FOR PLAYERS WHO RAN THE SCRIPT
----------------------------------------------------------------------
- 
-local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local UIS = game:GetService("UserInputService")
-local lp = Players.LocalPlayer
- 
--- Create a marker so other script users know YOU ran the script
-local marker = Instance.new("BoolValue")
-marker.Name = "HiveUser_" .. lp.UserId
-marker.Parent = ReplicatedStorage
- 
-local MyHiveTag = nil
- 
--- Function to create tag
-local function createTag(player, character)
-    -- Only tag players who ALSO have a marker
-    if not ReplicatedStorage:FindFirstChild("HiveUser_" .. player.UserId) then
-        return
-    end
- 
-    local head = character:FindFirstChild("Head") or character:WaitForChild("Head", 5)
-    if not head then return end
- 
-    local old = head:FindFirstChild("HiveTag")
-    if old then old:Destroy() end
- 
-    local tag = Instance.new("BillboardGui")
-    tag.Name = "HiveTag"
-    tag.Size = UDim2.new(0, 200, 0, 50)
-    tag.StudsOffset = Vector3.new(0, 3, 0)
-    tag.AlwaysOnTop = true
-    tag.Parent = head
- 
-    local frame = Instance.new("Frame")
-    frame.Size = UDim2.new(1, 0, 1, 0)
-    frame.BorderSizePixel = 0
-    frame.Parent = tag
- 
-    local text = Instance.new("TextLabel")
-    text.Size = UDim2.new(1, 0, 1, 0)
-    text.BackgroundTransparency = 1
-    text.Font = Enum.Font.SourceSansBold
-    text.TextScaled = true
-    text.Parent = frame
- 
-    if player.Name == "OTerribleMouseO" then
-        frame.BackgroundColor3 = Color3.fromRGB(180, 140, 0)
-        text.Text = "🐝 Hive Owner 🐝"
-        text.TextColor3 = Color3.fromRGB(255, 255, 255)
-    else
-        frame.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
-        text.Text = "🐝 Hive Member 🐝"
-        text.TextColor3 = Color3.fromRGB(0, 0, 0)
-    end
- 
-    if player == lp then
-        MyHiveTag = tag
-    end
-end
- 
--- Setup for each player
-local function setupPlayer(player)
-    -- Only script users get tags
-    if not ReplicatedStorage:FindFirstChild("HiveUser_" .. player.UserId) then
-        return
-    end
- 
-    player.CharacterAdded:Connect(function(char)
-        createTag(player, char)
-    end)
- 
-    if player.Character then
-        createTag(player, player.Character)
-    end
-end
- 
--- Apply to all players who ran the script
-for _, p in ipairs(Players:GetPlayers()) do
-    setupPlayer(p)
-end
- 
-Players.PlayerAdded:Connect(function(p)
-    -- Wait a moment for their marker to appear
-    task.wait(0.2)
-    setupPlayer(p)
-end)
+
+
+
+
