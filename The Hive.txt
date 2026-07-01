@@ -16,8 +16,8 @@ local CONFIG = {
                 "Infinite Yield",
                 "Dex Explorer",
                 "Universal Hub",
-                "No Void",
-                "",
+                "Anti-Void",
+                "Anti-Sit",
                 "Instant Proximity Prompt"
             },
             Scripts = {
@@ -25,7 +25,7 @@ local CONFIG = {
                 "https://gist.githubusercontent.com/BROgenesis/958c1fee7d8ad100da7f7d020d5d67f3/raw/8dc95caca1b46aa9f4d9dd2433f6be3d9bc69e45/Dex++",
                 "https://raw.githubusercontent.com/scroder-nesise/Nixon-universal-Hub/refs/heads/main/Nixons%20Hub",
                 "https://pastebin.com/raw/GXjJtxsb",
-                "",
+                "https://pastebin.com/raw/A1UYgsk9",
                 "https://pastebin.com/raw/B2dsqUtc"
             }
         },
