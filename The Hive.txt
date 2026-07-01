@@ -58,10 +58,10 @@ local CONFIG = {
 
         {
             Name = "R15 Animations",
-            Buttons = {"R15 Emote Wheel","","","R15 Invincible Fly","","R15 Custom Animations"},
+            Buttons = {"R15 Emote Wheel","R15 Super Girl","","R15 Invincible Fly","","R15 Custom Animations"},
             Scripts = {
                 "https://rawscripts.net/raw/Universal-Script-7yd7-I-Emote-Script-48024",
-                "",
+                "https://pastebin.com/raw/fv1y2gbi",
                 "",
                 "https://pastebin.com/raw/41RkQbp0",
                 "",
