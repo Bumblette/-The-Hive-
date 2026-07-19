@@ -45,13 +45,13 @@ local CONFIG = {
 
         {
             Name = "Script Hubs",
-            Buttons = {"XVC Hub","Foxname Hub","Sky Hub","Onyx [Keyless]","",""},
+            Buttons = {"XVC Hub","Foxname Hub","Sky Hub","Onyx [Keyless]","Animal Hospital GUI",""},
             Scripts = {
                 "https://pastebin.com/raw/Piw5bqGq",
                 "https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua",
                 "https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau",
                 "https://onyxv2.vercel.app/main.lua",
-                "",
+                "https://pastebin.com/raw/LdGz1Sfu",
                 ""
             }
         },
